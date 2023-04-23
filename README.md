@@ -16,13 +16,13 @@ This is a simple Laravel VueJS Inertia TailwindCSS application that allows users
 
 
 ## Installation
-1.Clone the repository
-2.Install dependencies by running composer install and npm install
-3.Set up your environment variables in the .env file from the .env.example file.
-4.Configure your database by setting up a new database, creating the necessary tables, and ensuring that the database credentials are set correctly in the .env file.
-4.Run migrations and seed the database by running php artisan migrate --seed
-5.Compile assets for production by running npm run production or for development npm run dev
-6.Serve the application by running php artisan serve or if your using laragon you can use [app folder name].test eg persona.test
+  1.Clone the repository
+  2.Install dependencies by running composer install and npm install
+  3.Set up your environment variables in the .env file from the .env.example file.
+  4.Configure your database by setting up a new database, creating the necessary tables, and ensuring that the database credentials are set correctly in the .env file.
+  5.Run migrations and seed the database by running php artisan migrate --seed
+  6.Compile assets for production by running npm run production or for development npm run dev
+  7.Serve the application by running php artisan serve or if your using laragon you can use [app folder name].test eg persona.test
 
 
 ## Usage
