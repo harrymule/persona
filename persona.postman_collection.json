@@ -12,8 +12,8 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "\"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGVyc29uYS50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY4MjA4NDMzMiwiZXhwIjoxNjgyMDg3OTMyLCJuYmYiOjE2ODIwODQzMzIsImp0aSI6IjFsZUgxajBqWmZYeDk3VVUiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.aPS3Ow9adwywpl5bzph8lo7SF_20F8xtjMgXm9klRWs\"",
+						"key": "accept",
+						"value": "application/json",
 						"type": "text"
 					}
 				],
