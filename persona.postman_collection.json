@@ -27,7 +27,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://persona.test/api/auth/login",
+					"raw": "http://persona.test/api/v1/auth/login",
 					"protocol": "http",
 					"host": [
 						"persona",
@@ -63,7 +63,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://persona.test/api/auth/register",
+					"raw": "http://persona.test/api/v1/auth/register",
 					"protocol": "http",
 					"host": [
 						"persona",
@@ -100,7 +100,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://persona.test/api/profile",
+					"raw": "http://persona.test/api/v1/profile",
 					"protocol": "http",
 					"host": [
 						"persona",
@@ -145,7 +145,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://persona.test/api/change_password",
+					"raw": "http://persona.test/api/v1/change_password",
 					"protocol": "http",
 					"host": [
 						"persona",
@@ -190,7 +190,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://persona.test/api/profile/1",
+					"raw": "http://persona.test/api/v1/profile/1",
 					"protocol": "http",
 					"host": [
 						"persona",

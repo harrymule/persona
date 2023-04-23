@@ -1,5 +1,5 @@
 ## Endpoint
-POST /api/auth/register
+POST /api/v1/auth/register
 Registers a new user.
 
 -**Request Parameters:**
@@ -26,7 +26,7 @@ The response body contains the details of the authenticated user in JSON format.
 
 
 ## Endpoint
-POST /api/auth/login
+POST /api/v1/auth/login
 Logs in a user.
 
 -**Request Parameters:**
@@ -55,7 +55,7 @@ The response body contains the details of the authenticated user in JSON format.
 
 
 ## Endpoint
-POST /api/updatepassword/{user_id}
+POST /api/v1/updatepassword/{user_id}
 Updates a user's password.
 
 -**Request Headers:**
@@ -92,7 +92,7 @@ This API returns the following error codes:
 
 
 ## Endpoint
-POST /api/profile/{id}
+POST /api/v1/profile/{id}
 Updates a user's profile.
 
 -**Request Headers:**
@@ -134,7 +134,7 @@ This API returns the following error codes:
 
 
 ## Endpoint
-GET /api/user
+GET /api/v1/user
 Returns details of the authenticated user.
 
 -**Request Headers:**

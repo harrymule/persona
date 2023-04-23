@@ -15,13 +15,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::prefix("v1")->name('v1')->group(function () {
+    Route::post('/auth/register', [AuthController::class, 'createUser']);
+    Route::post('/auth/login', [AuthController::class, 'loginUser']);
 
-Route::post('/auth/register', [AuthController::class, 'createUser']);
-Route::post('/auth/login', [AuthController::class, 'loginUser']);
-
-Route::middleware('auth:sanctum')->group(function () {
-    Route::get('profile',[UserController::class, 'index']);
-    Route::post('profile/{id}',[UserController::class, 'update']);
-    Route::post('change_password',[AuthController::class, 'changePassword']);
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::get('profile',[UserController::class, 'index']);
+        Route::post('profile/{id}',[UserController::class, 'update']);
+        Route::post('change_password',[AuthController::class, 'changePassword']);
+    });
 });
 
