@@ -86,9 +86,9 @@ export default {
         submitForm() {
             // Clear any existing errors
             this.errors = {};
-            console.log('current Password ' + this.currentPassword)
-            console.log('new Password ' + this.newPassword)
-            console.log('confirm Password ' + this.confirmPassword)
+            // console.log('current Password ' + this.currentPassword)
+            // console.log('new Password ' + this.newPassword)
+            // console.log('confirm Password ' + this.confirmPassword)
             // Validate the form data
             if (!this.currentPassword) {
                 this.errors.currentPassword = 'Please enter your current password';
@@ -111,9 +111,6 @@ export default {
             }
 
             // If there are no errors, submit the form
-            // You can make an API call here to update the user's password with the new password.
-            // For example, you can use the fetch() method to send a POST request to your server.
-            // This is just an example, you should replace the URL with the actual API endpoint that updates the password.
             axios.post('/updatepassword/' + this.user.id, {
                 currentPassword: this.currentPassword,
                 newPassword: this.newPassword,
@@ -122,9 +119,7 @@ export default {
                     if (response.status === 200) {
                         // Password updated successfully, show a success message to the user
                         // alert('Password updated successfully');
-                        console.log(response.data.message)
-                        // eventBus.emit('formSubmitted', 'Success!');
-                        // Logout user
+                        // console.log(response.data.message)
                         this.successMessage = response.data.message
                         setTimeout(() => {
                             this.errors = {};
@@ -132,33 +127,23 @@ export default {
                                 // Reload the page after logout
                                 location.reload();
                             }, 3000).catch((error) => {
-                                // Handle any errors and prevent the default redirect
                                 console.error(error);
                             });
-                            // axios.post('/logout').then(() => {
-                            //     // Reload the page after logout
-                            //     location.reload();
                         });
                     } else {
-                        // There was an error while updating the password, show an error message to the user
-                        // alert('There was an error while updating your password. Please try again later.');
-                        console.log(response.data.error)
+                        // console.log(response.data.error)
                         this.errors = response.data.error
                         setTimeout(() => {
                             this.errors = {};
                         }, 3000);
-                        // eventBus.emit('formSubmitted', 'Error!');
                     }
                 })
                 .catch((error) => {
-                    // There was a network error, show an error message to the user
-                    // alert('There was a network error while updating your password. Please try again later.');
-                    // eventBus.emit('formSubmitted', 'Error!');
                     this.errors = error.response.data
                     setTimeout(() => {
                         this.errors = {};
                     }, 3000);
-                    console.log(error.response.data)
+                    // console.log(error.response.data)
                 });
         },
         closeComponent() {

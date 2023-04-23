@@ -49,7 +49,6 @@
                         <font-awesome-icon icon="fa-brands fa-facebook-f" size="2xl" /> &nbsp;
                     </a>
                     <a class="link ml-8" href="#" data-tippy-content="@twitter_handle" style="color: rgb(3, 164, 236)">
-
                         <font-awesome-icon icon="fa-brands fa-twitter-square" size="2xl" /> &nbsp;
                     </a>
                 </div>
@@ -83,7 +82,6 @@ export default {
         NameComponent,
         PasswordComponent,
     },
-
     data() {
         return {
             loading: false,
@@ -117,7 +115,6 @@ export default {
         adjustHeight() {
             this.profileObject['mt-8'] = true;
         },
-
         getImageUrl() {
             return 'images/';
         },
@@ -127,18 +124,14 @@ export default {
             this.$refs.nameComponent.email = "";
             this.profileObject['mt-8', 'mb-8'] = false;
         },
-
         closePasswordComponent() {
             this.showPasswordComponent = false;
             this.profileObject['mt-8', 'mb-8'] = false;
         },
-
         formatDate() {
-            // return new Date(this.user.created_at).toLocaleDateString();
             const date = new Date(this.user.created_at);
             this.formattedDate = date.toDateString();
         },
-
         async fetchUserDetails() {
             try {
                 // send an authenticated request to fetch user details
@@ -163,12 +156,6 @@ export default {
             this.showPasswordComponent = !this.showPasswordComponent;
             this.showNameComponent = false;
         }
-    },
-    mounted() {
-
-    },
-    // updated() {
-    //     console.log("HomeComponent updated");
-    //     }
+    }
 };
 </script>

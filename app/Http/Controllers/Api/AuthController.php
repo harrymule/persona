@@ -118,7 +118,7 @@ class AuthController extends Controller
             $request->all(),
             [
                 'email' => 'required|email',
-                'password' => 'required|confirmed|min:8',
+                'password' => 'required|confirmed|min:6',
                 'password_confirmation' => 'required'
             ]
         );

@@ -16,31 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-// Route::post('register',[UserController::class, 'register']);
-// Route::post('login',[UserController::class, 'login']);
-// Route::get('profile',[UserController::class, 'getAuthenticatedUser']);
-
-// Route::middleware('auth:sanctum')->get('/user', function(Request $request){
-//     return $request->user();
-// });
-
 Route::post('/auth/register', [AuthController::class, 'createUser']);
 Route::post('/auth/login', [AuthController::class, 'loginUser']);
 
 Route::middleware('auth:sanctum')->group(function () {
-Route::get('profile',[UserController::class, 'index']);
-Route::post('profile/{id}',[UserController::class, 'update']);
-
-Route::post('change_password',[AuthController::class, 'changePassword']);
-
-
-
+    Route::get('profile',[UserController::class, 'index']);
+    Route::post('profile/{id}',[UserController::class, 'update']);
+    Route::post('change_password',[AuthController::class, 'changePassword']);
 });
 

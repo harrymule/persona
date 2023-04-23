@@ -7,13 +7,11 @@ This is a simple Laravel VueJS Inertia TailwindCSS application that allows users
 - **User profile management (update name, email, and password)**
 - **API token generation and management**
 
-
 ## Technologies Used
 - **Laravel 10**
 - **InertiaJS**
 - **VueJS 3** 
 - **TailwindCSS**
-
 
 ## Installation
   1. Clone the repository
@@ -23,7 +21,6 @@ This is a simple Laravel VueJS Inertia TailwindCSS application that allows users
   5. Run migrations and seed the database by running php artisan migrate --seed
   6. Compile assets for production by running npm run production or for development npm run dev
   7. Serve the application by running php artisan serve or if your using laragon you can use [app folder name].test eg persona.test
-
 
 ## Usage
 Visit the application homepage to log in or register

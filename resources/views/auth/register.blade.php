@@ -1,14 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-@extends('layouts.app')
-
-@section('content')
-
-
-
-
-
 <div class="container">
     <div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
         <div

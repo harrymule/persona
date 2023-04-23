@@ -30,8 +30,4 @@ Route::middleware('auth')->group(function () {
     Route::post('profile/{id}',[UserController::class, 'update']);
     Route::post('updatepassword/{user_id}',[UserController::class, 'password']);
     Route::get('updatepassword/{user_id}',[UserController::class, 'password']);
-
-
-    });
-
-// Route::get('/home', [LoginController::class, 'showHome'])->name('home');
+});

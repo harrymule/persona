@@ -9,16 +9,12 @@
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:outline-none focus:ring-2 focus:ring-blue-100"
                     required>
             </div>
-
-
-
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
                 <input type="email" id="email" v-model="email"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:outline-none focus:ring-2 focus:ring-blue-100"
                     required>
             </div>
-
             <button type="submit"
                 class="bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded mb-4 mt-2">
                 Update
@@ -31,14 +27,9 @@
         </form>
     </div>
 </template>
-
-
-
 <script>
 import axios from 'axios';
 import { eventBus } from './../eventBus.js';
-
-
 export default {
     name: 'nameComponent',
     props: {
@@ -46,8 +37,6 @@ export default {
             type: Object,
             required: true
         },
-
-
     },
     data() {
         return {
@@ -56,7 +45,6 @@ export default {
             name: this.user ? this.user.name : "",
             email: this.user ? this.user.email : "",
             updated: false,
-
         };
     },
     computed: {
@@ -93,7 +81,6 @@ export default {
                     eventBus.emit('formSubmitted', 'Success!');
                     console.log('harry');
                 }
-
                 setTimeout(() => {
                     this.loading = false;
                     this.updated = false;

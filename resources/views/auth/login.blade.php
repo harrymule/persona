@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-
 <div class="container">
     <div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
         <div
@@ -47,7 +45,6 @@
                                 {{ __('Forgot Your Password?') }}
                             </a>
                             @endif
-
                         </div>
                         <input type="password" id="password" name="password"
                             class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200 @error('password')  border-red-500 @enderror" />
@@ -107,8 +104,5 @@
             </div>
         </div>
     </div>
-
-
-
 </div>
 @endsection

@@ -18,28 +18,9 @@ app.component('example-component', ExampleComponent);
 import HomeComponent from './components/HomeComponent.vue';
 app.component('HomeComponent', HomeComponent);
 
-
-/* add font awesome icon component */
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.config.productionTip = false
-// const router = createRouter({
-//     history: createWebHistory(),
-//     routes: [{
-//             path: '/home',
-//             component: HomeComponent
-//         },
-//         {
-//             path: '/about',
-//             component: AboutComponent
-//         }
-//     ]
-// });
-
-// const app = createApp({});
-// app.use(router);
-
-// app.mount('#app');
 
 const routes = [
     {
@@ -47,17 +28,6 @@ const routes = [
       name: 'home',
       component: HomeComponent
     },
-
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: AboutComponent
-    // },
-    // {
-    //   path: '/contact',
-    //   name: 'contact',
-    //   component: ContactComponent
-    // }
   ]
 
   const router = createRouter({
