@@ -26,10 +26,12 @@
     </style>
     <div id="app">
         <nav class="mx-auto flex justify-between items-center px-24 py-6 text-2xl align-middle bg-white">
-            <div class="w-1/3 flex justify-start">
-                <a href="{{ url('/') }}" class="font-bold">{{ config('app.name', 'Persona') }}</a>
-            </div>
             @auth
+            <div class="w-1/3 flex justify-start">
+
+                <a href="{{ url('/home') }}" class="font-bold">{{ config('app.name', 'Persona') }}</a>
+            </div>
+
             <div class="w-2/3 flex justify-end">
                 <div class="relative inline-block text-left">
                     <a href="{{ route('logout') }}" type="button"
@@ -42,6 +44,10 @@
                         @csrf
                     </form>
                 </div>
+            </div>
+            @else
+            <div class="w-1/3 flex justify-start">
+                <a href="{{ url('/') }}" class="font-bold">{{ config('app.name', 'Persona') }}</a>
             </div>
             @endauth
         </nav>
