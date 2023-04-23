@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "a9ba20fd-23e9-4b41-bbb6-f5a6054aab1f",
+		"name": "persona",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3939412"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGVyc29uYS50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY4MjA4NDMzMiwiZXhwIjoxNjgyMDg3OTMyLCJuYmYiOjE2ODIwODQzMzIsImp0aSI6IjFsZUgxajBqWmZYeDk3VVUiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.aPS3Ow9adwywpl5bzph8lo7SF_20F8xtjMgXm9klRWs\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"John@email.com\",\r\n\"password\":\"pass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://persona.test/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"persona",
+						"test"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"jane\",\r\n\"email\":\"jane@email.com\",\r\n\"password\":\"pass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://persona.test/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"persona",
+						"test"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|YSGDWTbs9AgczQ1IpBfnWzSUXfnkL0eLeJUXLQaE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://persona.test/api/profile",
+					"protocol": "http",
+					"host": [
+						"persona",
+						"test"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|YSGDWTbs9AgczQ1IpBfnWzSUXfnkL0eLeJUXLQaE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"current_password\": \"123456789\",\r\n    \"new_password\": \"pass123\",\r\n    \"new_password_confirmation\": \"pass123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://persona.test/api/change_password",
+					"protocol": "http",
+					"host": [
+						"persona",
+						"test"
+					],
+					"path": [
+						"api",
+						"change_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|YSGDWTbs9AgczQ1IpBfnWzSUXfnkL0eLeJUXLQaE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john@email.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://persona.test/api/profile/1",
+					"protocol": "http",
+					"host": [
+						"persona",
+						"test"
+					],
+					"path": [
+						"api",
+						"profile",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
